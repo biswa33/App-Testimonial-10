@@ -1,0 +1,111 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*  { box-sizing: border-box; }
+    
+:root{
+  --primary-color:     #00B5BD;
+  --secondary-color:   #8BC53F;
+  --light-color :      #F4F7F6;
+  --dark-color:        #231F20;
+  --extra-light:       #ccc8c4;
+
+  --base-color:        #ffffff;
+  --black_color:       #000000;
+  --gray-color:        #999999;
+  --offwhite       :   #f6f6f6;
+  --section_bg:        #f4f4f4;
+  --border_color:      #edeff2;
+  --title-color    :   #2a2a2a;
+
+  --font_1 : 'Montserrat', sans-serif;   /* //Heading */
+}
+
+body{
+	margin:0;
+	padding: 0;
+	color: var(--dark-color);
+	font-size: 1rem;
+	font-family: var(--font_1);
+}
+
+.container { padding: 60px 0; width: 80%; margin:0 auto; }
+
+.pt-testimonial {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/************************* Left Section - Testimonial ***************************/
+.pt-testimonial-left-sec {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 40px;
+  /* background-image: linear-gradient(252deg, var(--light-color) 20%, var(--primary-color) 21%); */
+  background-image: linear-gradient(258deg, var(--light-color) 20%, var(--primary-color) 12%);
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: var(--base-color);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+svg {
+  height: 16px;
+  width: 16px;
+  fill: var(--base-color);
+}
+
+svg:not(:last-child) {
+  margin-right: 4px;
+}
+
+/************************* Right Section - Testimonial ***************************/
+.pt-testimonial-right-sec {
+  padding: 40px;
+  text-align: center;
+  background: var(--light-color);
+}
+
+.pt-testimonial-description {
+  line-height: 1.6;
+}
+
+.pt-testimonial-description::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid var(--primary-color);
+  width: 110px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.pt-testimonial-title {
+  margin: 26px 0 6px 0; 
+}
+.pt-testimonial-company {
+  margin: 0;
+}
+
+/************************* Media Queries ***************************/
+@media screen and (max-width: 1028px) {
+  .pt-testimonial {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+  }
+
+  .pt-testimonial-left-sec {
+    align-items: center;
+    background-image: none;
+    background-color: var(--primary-color);
+  }
+}
